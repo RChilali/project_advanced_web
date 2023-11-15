@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const MovieA = styled("a")({
+export const MoviePoster = styled("div")({
   display: "flex",
   width: "256px",
   height: "384px",
