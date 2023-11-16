@@ -4,15 +4,20 @@ interface SearchBarProps {
     backgroundColor?: string;
 }
 
-export const SearchBar = styled("input")(
-    ({backgroundColor}: SearchBarProps) => ({
-        display: "flex",
-        backgroundColor: backgroundColor ?? "none",
-        borderRadius: "30px",
-        border: backgroundColor ?? "solid white",
-        boxShadow: "none",
-        margin: "20px",
-        ":focus-visible": {
-            borderColor: "solid black"
-        },
-    }));
+export const SearchBar = styled("input")(({backgroundColor}: SearchBarProps) => ({
+    display: "flex",
+    backgroundColor: backgroundColor ?? "none",
+    border: backgroundColor ?? "solid white",
+    borderRadius: "30px",
+    boxShadow: "none",
+    margin: "20px",
+    height: "30px",
+    width: "15rem",
+    ":focus-visible": {
+        borderColor: "solid black"
+    },
+    "@media (max-width: 640px)": {
+        height: "20px",
+        width: "85%",
+    },
+}));

@@ -1,5 +1,4 @@
 import {PropsWithChildren} from "react";
-import {MovieListContent} from "../molecules/MovieListContent.tsx";
 import {MovieListPage} from "../atoms/MovieListPage.tsx";
 import {MovieListHeader} from "../molecules/MovieListHeader.tsx";
 
@@ -15,7 +14,7 @@ export const MovieListPageLayout = ({isDarkTheme}: PropsWithChildren<MovieListPa
 
     return (<MovieListPage pageColor={pageColor}>
             <MovieListHeader isDarkMode={isDarkTheme}/>
-            <MovieListContent/>
+           {/* <MovieListContent/>*/}
         </MovieListPage>
     );
 };
