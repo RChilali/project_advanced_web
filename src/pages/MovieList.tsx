@@ -1,13 +1,11 @@
 import {MovieListPageLayout} from "../design/layouts/MovieListPageLayout.tsx";
-import {MovieListHeader} from "../design/molecules/MovieListHeader.tsx";
-import {MovieListContent} from "../design/molecules/MovieListContent.tsx";
+import {useIsDarkTheme} from "../hooks/useIsDarkTheme.tsx";
 
 function MovieList() {
+    const isDarkTheme = useIsDarkTheme();
+
     return (
-        <MovieListPageLayout>
-            <MovieListHeader title={"🎬🍿 Movie library"} placeholder={"🔎 Search for movie"}/>
-            <MovieListContent/>
-        </MovieListPageLayout>
+        <MovieListPageLayout isDarkTheme={isDarkTheme} />
     );
 }
 
