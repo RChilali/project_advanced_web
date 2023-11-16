@@ -5,6 +5,7 @@ import {createBrowserRouter, RouterProvider,} from "react-router-dom";
 import ErrorPage from "../pages/ErrorPage.tsx";
 import MovieInformation from "../pages/MovieInformation.tsx";
 import MovieList from "../pages/MovieList.tsx";
+import "../index.css";
 
 const router = createBrowserRouter([
   {
