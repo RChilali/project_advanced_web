@@ -7,7 +7,6 @@ interface MovieListPageProps {
 export const MovieListPage = styled("div")(
     ({pageColor}: MovieListPageProps) => ({
         backgroundColor: pageColor,
-        height: "100vh",
-        width: "100wh",
+        height: "100%",
         color: "black",
     }));

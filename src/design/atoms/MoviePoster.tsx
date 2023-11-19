@@ -4,8 +4,9 @@ export const MoviePoster = styled("img")({
   display: "flex",
   width: "256px",
   height: "384px",
-  transition: "all 0.3s ease-in-out",
+  flexShrink: 0,
   borderRadius: "5px",
+  transition: "all 0.3s ease-in-out",
   // ":hover": {
   //   transform: "scale(1.05)",
   //   cursor: "pointer",
