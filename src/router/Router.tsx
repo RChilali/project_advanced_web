@@ -10,7 +10,7 @@ import "../index.css";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MovieList></MovieList>,
+    element: <MovieList/>,
     errorElement: <ErrorPage/>,
   },
   {

@@ -10,9 +10,7 @@ export const MovieListContent = ({}: PropsWithChildren<MovieListLayoutHolderProp
     return (
         <MovieListLayout>
             {movies && movies.results.map(({poster_path}) => (
-                <MoviePoster>
-                    <img src={poster_path} alt="alt"></img>
-                </MoviePoster>
+                <MoviePoster src={poster_path} alt="alt"></MoviePoster>
             ))}
         </MovieListLayout>
     );
