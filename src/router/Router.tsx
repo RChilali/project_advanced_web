@@ -13,7 +13,7 @@ const queryClient = new QueryClient()
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MovieList></MovieList>,
+    element: <MovieList/>,
     errorElement: <ErrorPage/>,
   },
   {
