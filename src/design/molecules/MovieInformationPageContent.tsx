@@ -2,12 +2,22 @@ import {PosterImage} from "../atoms/images/PosterImage.tsx";
 import {CaptureImage} from "../atoms/images/CaptureImage.tsx";
 import {InformationHeader} from "../atoms/headers/InformationHeader.tsx";
 import {MovieInformation} from "../atoms/MovieInformation.tsx";
-import {useLoaderData} from "react-router-dom";
+import { useLoaderData} from "react-router-dom";
 import {MovieDetails} from "../../dto/MovieDetails.ts";
+import {MovieCredits} from "../../dto/MovieCredits.ts";
+import {MovieImages} from "../../dto/MovieImages.ts";
+import {MovieInformationCreditsHolder} from "./MovieInformationCreditsHolder.tsx";
+import {MovieInformationImageHolder} from "./MovieInformationImageHolder.tsx";
 
 
 export const MovieInformationPageContent = () => {
-  const movieDetails = useLoaderData() as MovieDetails;
+  const data = useLoaderData() as {
+    movieDetails: MovieDetails,
+    movieCredits: MovieCredits,
+    movieImages: MovieImages
+  }
+  const movieDetails = data.movieDetails;
+
   return (
       <div>
         <InformationHeader>
@@ -22,8 +32,8 @@ export const MovieInformationPageContent = () => {
             <p>{movieDetails.release_date}</p>
           </MovieInformation>
         </InformationHeader>
-        <p>Credits</p>
-        <p>Images</p>
+        <MovieInformationCreditsHolder/>
+        <MovieInformationImageHolder/>
         <CaptureImage/>
       </div>
   );
