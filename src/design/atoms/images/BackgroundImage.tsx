@@ -11,8 +11,9 @@ export const BackgroundImage = styled("div")(
       position: "absolute",
       zIndex: "-1",
       display: "flex",
-      height: "100%",
+      height: "1610.75px",
       width: "100%",
       color: "black",
-      backgroundSize: "cover",
+      top: "0",
+      left: "0",
     }));
