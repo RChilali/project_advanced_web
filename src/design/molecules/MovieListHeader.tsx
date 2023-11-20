@@ -1,6 +1,6 @@
 import {Title} from "../atoms/Title.tsx";
 import {SearchBar} from "../atoms/SearchBar.tsx";
-import {HeaderLayout} from "../layouts/HeaderLayout.tsx";
+import {Header} from "../atoms/Header.tsx";
 import {PropsWithChildren} from "react";
 
 const LIBRARY_TITLE = "🎬🍿 Movie library";
@@ -19,8 +19,8 @@ export const MovieListHeader = ({isDarkMode}: PropsWithChildren<MovieListHeaderP
         textColor = "white"
     }
 
-    return (<HeaderLayout>
+    return (<Header>
         <Title textColor={textColor}>{LIBRARY_TITLE}</Title>
         <SearchBar type="text" placeholder={SEARCH_TITLE} backgroundColor={searchBarColor}/>
-    </HeaderLayout>);
+    </Header>);
 }
