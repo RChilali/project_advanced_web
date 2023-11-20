@@ -4,7 +4,7 @@ interface MovieBackgroundImageProps {
   imgSrc: string;
 }
 
-export const MovieBackgroundImage = styled("div")(
+export const BackgroundImage = styled("div")(
     ({imgSrc}: MovieBackgroundImageProps) => ({
       backgroundImage: 'url("' + imgSrc + '");',
       filter: "blur(2em)",

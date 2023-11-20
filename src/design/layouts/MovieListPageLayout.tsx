@@ -1,5 +1,5 @@
 import {PropsWithChildren} from "react";
-import {MovieListPage} from "../atoms/MovieListPage.tsx";
+import {MovieListPage} from "../atoms/pages/MovieListPage.tsx";
 import {MovieListHeader} from "../molecules/MovieListHeader.tsx";
 import {MovieListContent} from "../molecules/MovieListContent.tsx";
 
@@ -13,9 +13,10 @@ export const MovieListPageLayout = ({isDarkTheme}: PropsWithChildren<MovieListPa
     if (isDarkTheme)
         pageColor = "#1F2937";
 
-    return (<MovieListPage pageColor={pageColor}>
+    return (
+        <MovieListPage pageColor={pageColor}>
             <MovieListHeader isDarkMode={isDarkTheme}/>
-                <MovieListContent/>
+            <MovieListContent/>
         </MovieListPage>
     );
 };

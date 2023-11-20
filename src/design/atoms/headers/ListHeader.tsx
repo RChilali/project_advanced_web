@@ -1,6 +1,10 @@
 import styled from "@emotion/styled";
 
+<<<<<<<< HEAD:src/design/atoms/Header.tsx
 export const Header = styled("div")({
+========
+export const ListHeader = styled("div")({
+>>>>>>>> 333a1dc (feature: refacto file name):src/design/atoms/headers/ListHeader.tsx
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",

@@ -4,7 +4,7 @@ interface TitleProps {
     textColor: string;
 }
 
-export const Title = styled("p")(({textColor}: TitleProps) => ({
+export const Text = styled("p")(({textColor}: TitleProps) => ({
     font: "2.25rem Arial, ui-sans-serif",
     margin: "0",
     paddingLeft: "15px",
