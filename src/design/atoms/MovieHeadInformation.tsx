@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const MovieHeadInformationLayout = styled("div")({
+export const MovieHeadInformation = styled("div")({
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",

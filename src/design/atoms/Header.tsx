@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const HeaderLayout = styled("div")({
+export const Header = styled("div")({
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",

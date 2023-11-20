@@ -1,5 +1,5 @@
 import {useFetchNowPlayingMovies} from "../../rules/useFetchNowPlayingMovies.tsx";
-import {MovieListLayout} from "../layouts/MovieListLayout.tsx";
+import {MovieList} from "../atoms/MovieList.tsx";
 import {Link} from "react-router-dom";
 import {MoviePoster} from "../atoms/MoviePoster.tsx";
 
@@ -12,13 +12,13 @@ export const MovieListContent = () => {
 
 
   return (
-      <MovieListLayout>
+      <MovieList>
         {movies?.map(({poster_path, id}) => (
             <Link key={id} to={"/movie/" + id}>
               <MoviePoster key={id} src={"https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + poster_path} alt="alt"></MoviePoster>
             </Link>
         ))}
-      </MovieListLayout>
+      </MovieList>
   );
 };
 
