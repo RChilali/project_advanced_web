@@ -5,7 +5,7 @@ export const ListHeader = styled("div")({
   alignItems: "center",
   justifyContent: "space-between",
   margin: "0",
-  padding: "2rem 0 0 0",
+  padding: "2rem 3rem 0 3rem",
   "@media (max-width: 640px)": {
     display: "block",
   },

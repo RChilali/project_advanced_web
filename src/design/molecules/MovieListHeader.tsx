@@ -2,6 +2,7 @@ import {Text} from "../atoms/Text.tsx";
 import {SearchBar} from "../atoms/SearchBar.tsx";
 import {ListHeader} from "../atoms/headers/ListHeader.tsx";
 import React, {PropsWithChildren} from "react";
+import {TextVariant} from "../../enum/TextVariant.ts";
 
 const LIBRARY_TITLE = "🎬🍿 Movie library";
 const SEARCH_TITLE = "🔎 Search for movie";
@@ -27,7 +28,7 @@ export const MovieListHeader = ({isDarkMode, setSearchTerm, searchTerm}: PropsWi
 
     return (
         <ListHeader>
-            <Text textColor={textColor}>{LIBRARY_TITLE}</Text>
+            <Text  textColor={textColor} variant={TextVariant.extraLarge} isItalic={false} isMediaActive={true}>{LIBRARY_TITLE}</Text>
             <SearchBar
                 type="text"
                 placeholder={SEARCH_TITLE}

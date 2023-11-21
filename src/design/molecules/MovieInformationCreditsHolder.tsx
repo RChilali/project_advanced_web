@@ -4,6 +4,8 @@ import {MovieCredits} from "../../dto/MovieCredits.ts";
 import {MovieImages} from "../../dto/MovieImages.ts";
 import {CreditsList} from "../atoms/CreditsList.tsx";
 import {MovieInformationCredits} from "./MovieInformationCredits.tsx";
+import {TextVariant} from "../../enum/TextVariant.ts";
+import {Text} from "../atoms/Text.tsx";
 
 
 export const MovieInformationCreditsHolder = () => {
@@ -17,7 +19,7 @@ export const MovieInformationCreditsHolder = () => {
 
   return (
       <>
-        <p>Credits</p>
+        <Text textColor={"white"} variant={TextVariant.large} isItalic={false} isMediaActive={false}>Credits</Text>
         <CreditsList>
           {movieCredits.cast?.map(({id, name, character, profile_path}) => (
               <MovieInformationCredits name={name} character={character} profile_path={profile_path}
