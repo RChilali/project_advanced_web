@@ -8,6 +8,8 @@ import {MovieCredits} from "../../dto/MovieCredits.ts";
 import {MovieImages} from "../../dto/MovieImages.ts";
 import {MovieInformationCreditsHolder} from "./MovieInformationCreditsHolder.tsx";
 import {MovieInformationImageHolder} from "./MovieInformationImageHolder.tsx";
+import {Text} from "../atoms/Text.tsx";
+import {TextVariant} from "../../enum/TextVariant.ts";
 
 
 export const MovieInformationPageContent = () => {
@@ -26,10 +28,10 @@ export const MovieInformationPageContent = () => {
               alt={movieDetails.original_title}>
           </PosterImage>
           <MovieInformation>
-            <p>{movieDetails.original_title}</p>
-            <p>{movieDetails.overview}</p>
-            <p>{movieDetails.genres.map(genre => genre.name).join(', ')}</p>
-            <p>{movieDetails.release_date}</p>
+            <Text textColor={"white"} variant={TextVariant.extraLarge} isItalic={false} isMediaActive={false}>{movieDetails.original_title}</Text>
+            <Text textColor={"white"} variant={TextVariant.medium} isItalic={false} isMediaActive={false}>{movieDetails.overview}</Text>
+            <Text textColor={"white"} variant={TextVariant.medium} isItalic={true} isMediaActive={false}>{movieDetails.genres.map(genre => genre.name).join(', ')}</Text>
+            <Text textColor={"white"} variant={TextVariant.medium} isItalic={true} isMediaActive={false}>{movieDetails.release_date}</Text>
           </MovieInformation>
         </InformationHeader>
         <MovieInformationCreditsHolder/>

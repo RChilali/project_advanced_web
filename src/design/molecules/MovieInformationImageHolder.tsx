@@ -4,6 +4,8 @@ import {MovieDetails} from "../../dto/MovieDetails.ts";
 import {MovieCredits} from "../../dto/MovieCredits.ts";
 import {MovieImages} from "../../dto/MovieImages.ts";
 import {CaptureImage} from "../atoms/images/CaptureImage.tsx";
+import {Text} from "../atoms/Text.tsx";
+import {TextVariant} from "../../enum/TextVariant.ts";
 
 
 export const MovieInformationImageHolder = () => {
@@ -16,7 +18,7 @@ export const MovieInformationImageHolder = () => {
 
   return (
       <>
-        <p>Images</p>
+        <Text textColor={"white"} variant={TextVariant.large} isItalic={false} isMediaActive={false}>Images</Text>
         <CaptureImageList>
           {movieImages.backdrops?.map(({file_path}) => (
               <CaptureImage src={"https://image.tmdb.org/t/p/original/" + file_path} />

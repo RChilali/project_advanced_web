@@ -5,5 +5,6 @@ export const BackButton = styled(Link)({
   display: "flex",
   flexDirection: "row",
   textDecoration: "none",
-  font: "1.15em Arial, ui-sans-serif",
+  font: "normal 400 16px/24px Roboto",
+  color: "#FFF",
 });
