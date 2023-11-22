@@ -1,6 +1,6 @@
 import {MovieCredits} from "../dto/MovieCredits.ts";
 
-export const fetchMovieCredits = async (movieId: number): Promise<MovieCredits> => {
+export const FetchMovieCredits = async (movieId: number): Promise<MovieCredits> => {
   const options = {
     method: 'GET',
     headers: {

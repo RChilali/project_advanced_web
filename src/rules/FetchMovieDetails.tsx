@@ -1,6 +1,6 @@
-import {MovieImages} from "../dto/MovieImages.ts";
+import {MovieDetails} from "../dto/MovieDetails.ts";
 
-export const fetchMovieImages = async (movieId: number): Promise<MovieImages> => {
+export const FetchMovieDetails = async (movieId: number): Promise<MovieDetails> => {
   const options = {
     method: 'GET',
     headers: {
@@ -11,7 +11,7 @@ export const fetchMovieImages = async (movieId: number): Promise<MovieImages> =>
   };
 
   const response = await fetch(
-      `https://api.themoviedb.org/3/movie/${movieId}/images?include_image_language=null`,
+      `https://api.themoviedb.org/3/movie/${movieId}?language=en`,
       options,
   );
 

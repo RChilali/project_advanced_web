@@ -6,7 +6,7 @@ export const BackButtonHolder = () => {
           <div className="material-symbols-outlined">
             arrow_back
           </div>
-          <div> Back</div>
+          <div>  Back</div>
         </BackButton>
 
   )
