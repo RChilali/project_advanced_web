@@ -8,4 +8,8 @@ export const InformationHeader = styled("div")({
     flexShrink: 0,
     marginTop: "16px",
     marginBottom:"16px",
+    "@media (max-width: 760px)": {
+        flexDirection: "column",
+        alignItems: "center",
+    },
 });
