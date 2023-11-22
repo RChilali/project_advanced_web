@@ -1,7 +1,7 @@
 import {Movie} from "../dto/Movie.ts";
 import {useQuery} from "react-query";
 
-export const  useFetchNowPlayingMovies = () => {
+export const  FetchNowPlayingMovies = () => {
   const options = {
     method: 'GET',
     headers: {

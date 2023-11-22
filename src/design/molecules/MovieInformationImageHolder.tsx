@@ -20,8 +20,8 @@ export const MovieInformationImageHolder = () => {
       <>
         <Text textColor={"white"} variant={TextVariant.large} isItalic={false} isMediaActive={false}>Images</Text>
         <CaptureImageList>
-          {movieImages.backdrops?.map(({file_path}) => (
-              <CaptureImage src={"https://image.tmdb.org/t/p/original/" + file_path} />
+          {movieImages.backdrops?.map(({file_path},index) => (
+              <CaptureImage key={index} src={"https://image.tmdb.org/t/p/original/" + file_path} />
           ))}
         </CaptureImageList>
       </>
