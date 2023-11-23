@@ -8,7 +8,7 @@ interface StarProps {
 
 export const StarHolder = ({isFavorite, onClick,setIsHover}: StarProps) => {
   return (
-      <Star  isFavorite={isFavorite} onClick={onClick} onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
+      <Star isFavorite={isFavorite} onClick={onClick} onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
         {isFavorite ? '★' : '☆'}
       </Star>
   );
