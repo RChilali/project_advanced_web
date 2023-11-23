@@ -7,7 +7,7 @@ import MovieInformation from "../pages/MovieInformation.tsx";
 import MovieList from "../pages/MovieList.tsx";
 import "../index.css";
 import {QueryClient, QueryClientProvider} from "react-query";
-import {loader as movieLoader} from "../rules/MovieLoader.ts";
+import {movieLoader} from "../rules/MovieLoader.ts";
 
 const queryClient = new QueryClient()
 
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     path: "movie/:movieId",
     element: <MovieInformation/>,
     errorElement: <ErrorPage/>,
-    loader: movieLoader,
+    loader: (args) => movieLoader(args, queryClient)
   },
 ]);
 
