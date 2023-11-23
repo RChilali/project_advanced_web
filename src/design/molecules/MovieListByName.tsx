@@ -3,7 +3,7 @@ import {PosterLink} from "./PosterLink.tsx";
 import {Size} from "../../enum/Size.ts";
 import {StarHolder} from "./StarHolder.tsx";
 import {PosterImageHolder} from "./PosterImageHolder.tsx";
-import {FetchMovieByName} from "../../rules/FetchMovieByName.ts";
+import {UseFetchMovieByName} from "../../rules/UseFetchMovieByName.ts";
 
 interface MovieListNowPlayingProps {
   searchTerm: string;
@@ -21,7 +21,7 @@ export const MovieListByName = ({
                                   setIsHover
                                 }: MovieListNowPlayingProps) => {
 
-  const {isLoading, error, data: movies} = FetchMovieByName(searchTerm);
+  const {isLoading, error, data: movies} = UseFetchMovieByName(searchTerm);
 
 
   if (error) return <div>Request Failed</div>;
