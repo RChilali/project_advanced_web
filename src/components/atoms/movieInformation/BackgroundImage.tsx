@@ -7,11 +7,11 @@ interface MovieBackgroundImageProps {
 export const BackgroundImage = styled("div")(
     ({imgSrc}: MovieBackgroundImageProps) => ({
       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("${imgSrc}")`,
-      filter: "blur(4em)",
+      filter: "blur(5px)",
       position: "absolute",
       zIndex: "-1",
       display: "flex",
-      height: "1639.08px",
+      height: "1710.08px",
       width: "100%",
       color: "black",
       top: "0",
