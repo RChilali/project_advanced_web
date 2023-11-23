@@ -1,32 +1,28 @@
-import {useLoaderData} from "react-router-dom";
-import {MovieDetails} from "../../../../dto/MovieDetails.ts";
-import {MovieCredits} from "../../../../dto/MovieCredits.ts";
-import {MovieImages} from "../../../../dto/MovieImages.ts";
-import {CreditsList} from "../../../atoms/movieInformation/credits/CreditsList.tsx";
-import {MovieInformationCredits} from "../MovieInformationCredits.tsx";
-import {TextVariant} from "../../../../enum/TextVariant.ts";
+import {CreditsImage} from "../../../atoms/movieInformation/credits/CreditsImage.tsx";
+import {Credits} from "../../../atoms/movieInformation/credits/Credits.tsx";
 import {Text} from "../../../atoms/common/text/Text.tsx";
+import {TextVariant} from "../../../../enum/TextVariant.ts";
 
 
-export const MovieInformationCreditsHolder = () => {
-  const data = useLoaderData() as {
-    movieDetails: MovieDetails,
-    movieCredits: MovieCredits,
-    movieImages: MovieImages
-  }
-  const movieCredits = data.movieCredits;
+interface MovieInformationCreditsProps {
+  name: string;
+  character: string;
+  profile_path: string;
+}
 
+export const MovieInformationCreditsHolder = ({name, character, profile_path }: MovieInformationCreditsProps) => {
+    if (profile_path == undefined) {
+        profile_path = "/no_photo.png"
+    }
+    else
+        profile_path = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + profile_path
 
-  return (
-      <>
-        <Text textColor={"white"} variant={TextVariant.large} isItalic={false} isMediaActive={false}>Credits</Text>
-        <CreditsList>
-          {movieCredits.cast?.map(({id, name, character, profile_path}) => (
-              <MovieInformationCredits name={name} character={character} profile_path={profile_path}
-                                       key={id}
-              />
-          ))}
-        </CreditsList>
-      </>
-  );
-};
+    return (
+      <Credits>
+        <CreditsImage
+            src={profile_path}/>
+        <Text textColor={"white"} variant={TextVariant.small} isItalic={false} isMediaActive={false}>{name}</Text>
+        <Text textColor={"#D6D3D1"} variant={TextVariant.small} isItalic={false} isMediaActive={false}>{character}</Text>
+      </Credits>
+  )
+}

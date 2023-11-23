@@ -3,7 +3,7 @@ import {useLoaderData} from "react-router-dom";
 import {MovieDetails} from "../../../dto/MovieDetails.ts";
 import {MovieCredits} from "../../../dto/MovieCredits.ts";
 import {MovieImages} from "../../../dto/MovieImages.ts";
-import {MovieInformationCreditsHolder} from "./holders/MovieInformationCreditsHolder.tsx";
+import {MovieInformationCreditsListHolder} from "./holders/MovieInformationCreditsListHolder.tsx";
 import {MovieInformationImageHolder} from "./holders/MovieInformationImageHolder.tsx";
 import {MovieInformationHeaderHolder} from "./holders/MovieInformationHeaderHolder.tsx";
 
@@ -19,7 +19,7 @@ export const MovieInformationPageContent = () => {
   return (
       <div>
         <MovieInformationHeaderHolder movieDetails={movieDetails}/>
-        <MovieInformationCreditsHolder/>
+        <MovieInformationCreditsListHolder/>
         <MovieInformationImageHolder/>
         <CaptureImage/>
       </div>
