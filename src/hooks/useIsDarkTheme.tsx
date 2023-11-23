@@ -7,6 +7,5 @@ export const useIsDarkTheme = () => {
   window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
     setIsDarkTheme(e.matches);
   });
-
   return isDarkTheme;
 }

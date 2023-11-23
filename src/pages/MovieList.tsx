@@ -1,4 +1,4 @@
-import {MovieListPageLayout} from "../design/layouts/MovieListPageLayout.tsx";
+import {MovieListPageLayout} from "../components/layouts/movieList/MovieListPageLayout.tsx";
 import {useIsDarkTheme} from "../hooks/useIsDarkTheme.tsx";
 
 function MovieList() {

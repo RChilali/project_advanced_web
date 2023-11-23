@@ -1,4 +1,4 @@
-import {MovieInformationPageLayout} from "../design/layouts/MovieInformationPageLayout.tsx";
+import {MovieInformationPageLayout} from "../components/layouts/movieInformation/MovieInformationPageLayout.tsx";
 
 
 
