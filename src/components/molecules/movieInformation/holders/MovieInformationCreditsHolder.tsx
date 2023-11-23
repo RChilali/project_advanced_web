@@ -12,7 +12,7 @@ interface MovieInformationCreditsProps {
 
 export const MovieInformationCreditsHolder = ({name, character, profile_path }: MovieInformationCreditsProps) => {
     if (profile_path == undefined) {
-        profile_path = "/no_photo.png"
+        profile_path = "/no_photo.jpg"
     }
     else
         profile_path = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + profile_path
