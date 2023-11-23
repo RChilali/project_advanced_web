@@ -1,16 +1,12 @@
-import {useEffect, useState} from "react";
+import {useState} from "react";
 
 export const useIsDarkTheme = () => {
-    const getCurrentTheme = () => window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const [isDarkTheme, setIsDarkTheme] = useState(getCurrentTheme());
-    const mqListener = ((e: { matches: boolean | ((prevState: boolean) => boolean); }) => {
-        setIsDarkTheme(e.matches);
-    });
+  const getCurrentTheme = () => window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const [isDarkTheme, setIsDarkTheme] = useState(getCurrentTheme());
 
-    useEffect(() => {
-        const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
-        darkThemeMq.addListener(mqListener);
-        return () => darkThemeMq.removeListener(mqListener);
-    }, []);
-    return isDarkTheme;
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+    setIsDarkTheme(e.matches);
+  });
+
+  return isDarkTheme;
 }

@@ -1,7 +1,7 @@
 import {Movie} from "../dto/Movie.ts";
 import {useQuery} from "react-query";
 
-export const  FetchMovieByName = (movieName:string) => {
+export const  UseFetchMovieByName = (movieName:string) => {
   const options = {
     method: 'GET',
     headers: {
